@@ -27,3 +27,8 @@ for step in range(100):
 new_positions = positions
 
 np.savetxt("new_positions.txt", new_positions, delimiter=",")
+
+max_disp = np.max(np.abs(new_positions[:,1] - old_positions[:,1]))
+max_min = np.min(np.abs(new_positions[:,1] - old_positions[:,1]))
+avg_disp = np.mean(np.abs(new_positions[:,1] - old_positions[:,1]))
+
